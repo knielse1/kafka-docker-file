@@ -5,6 +5,7 @@ FROM java:openjdk-8-jre
 RUN chmod -R 777 /var/
 RUN chmod -R 777 /bin/
 RUN chmod -R 777 /tmp/
+RUN chmod -R 777 /opt/
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV SCALA_VERSION 2.11
