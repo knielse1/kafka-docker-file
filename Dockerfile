@@ -2,6 +2,8 @@
 
 FROM java:openjdk-8-jre
 
+RUN chmod -R 777 /var/
+
 ENV DEBIAN_FRONTEND noninteractive
 ENV SCALA_VERSION 2.11
 ENV KAFKA_VERSION 0.10.1.0
@@ -16,7 +18,7 @@ RUN apt-get update && \
     tar xfz /tmp/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz -C /opt && \
     rm /tmp/kafka_"$SCALA_VERSION"-"$KAFKA_VERSION".tgz
 
-RUN chmod -R 777 /var/log/
+
 
 ADD scripts/start-kafka.sh /usr/bin/start-kafka.sh
 
