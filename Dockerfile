@@ -4,6 +4,7 @@ FROM java:openjdk-8-jre
 
 RUN chmod -R 777 /opt/
 
+RUN mkdir /opt/kafka_2.11-0.10.2.1/
 RUN mkdir /opt/kafka_2.11-0.10.2.1/logs
 
 RUN chmod -R 777 /var/
