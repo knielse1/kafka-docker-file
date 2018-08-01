@@ -7,11 +7,6 @@ RUN chmod -R 777 /opt/
 RUN mkdir /opt/kafka_2.11-0.10.2.1/
 RUN mkdir /opt/kafka_2.11-0.10.2.1/logs
 
-RUN chmod -R 777 /var/
-RUN chmod -R 777 /bin/
-RUN chmod -R 777 /tmp/
-RUN chmod -R 777 /opt/
-
 ENV DEBIAN_FRONTEND noninteractive
 ENV SCALA_VERSION 2.11
 ENV KAFKA_VERSION 0.10.2.1
@@ -32,6 +27,11 @@ ADD scripts/start-kafka.sh /usr/bin/start-kafka.sh
 
 # Supervisor config
 ADD supervisor/kafka.conf supervisor/zookeeper.conf /etc/supervisor/conf.d/
+
+RUN chmod -R 777 /var/
+RUN chmod -R 777 /bin/
+RUN chmod -R 777 /tmp/
+RUN chmod -R 777 /opt/
 
 # 2181 is zookeeper, 9092 is kafka
 EXPOSE 2181 9092
