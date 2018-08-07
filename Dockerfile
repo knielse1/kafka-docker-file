@@ -34,8 +34,8 @@ RUN chmod -R 777 /bin/
 RUN chmod -R 777 /tmp/
 RUN chmod -R 777 /opt/
 
-RUN addgroup 1001 root
-USER 1001
+RUN addgroup nginx root
+USER nginx
 
 
 
