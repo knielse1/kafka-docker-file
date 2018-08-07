@@ -45,7 +45,7 @@ USER 1001
 # 2181 is zookeeper, 9092 is kafka
 EXPOSE 2181 9092
 
-CMD ["supervisord", "-n", "-u 1001"]
+CMD ["supervisord", "-n", "-u1001"]
 
 #RUN /usr/share/zookeeper/bin/zkServer.sh start
 #RUN /usr/bin/start-kafka.sh
