@@ -37,7 +37,7 @@ RUN chmod -R 777 /tmp/
 RUN chmod -R 777 /opt/
 
 RUN useradd -ms /bin/bash supervisor
-RUN addgroup supervisor root
+RUN addgroup supervisor supervisor
 USER supervisor
 
 
