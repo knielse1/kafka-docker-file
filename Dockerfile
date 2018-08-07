@@ -6,6 +6,7 @@ RUN chmod -R 777 /opt/
 
 RUN mkdir /opt/kafka_2.11-0.10.2.1/
 RUN mkdir /opt/kafka_2.11-0.10.2.1/logs
+RUN mkdir /var/run/supervisor
 
 ENV DEBIAN_FRONTEND noninteractive
 ENV SCALA_VERSION 2.11
