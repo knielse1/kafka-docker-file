@@ -28,10 +28,15 @@ ADD scripts/start-kafka.sh /usr/bin/start-kafka.sh
 # Supervisor config
 ADD supervisor/kafka.conf supervisor/zookeeper.conf /etc/supervisor/conf.d/
 
+RUN chmod -R 777 /usr/
 RUN chmod -R 777 /var/
 RUN chmod -R 777 /bin/
 RUN chmod -R 777 /tmp/
 RUN chmod -R 777 /opt/
+
+RUN addgroup supervisor root
+USER supervisor
+
 
 
 # 2181 is zookeeper, 9092 is kafka
