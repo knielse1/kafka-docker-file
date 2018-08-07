@@ -35,7 +35,7 @@ RUN chmod -R 777 /tmp/
 RUN chmod -R 777 /opt/
 
 RUN addgroup supervisor root
-USER supervisor
+USER 1001
 
 
 
