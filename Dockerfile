@@ -30,6 +30,9 @@ ADD scripts/start-kafka.sh /usr/bin/start-kafka.sh
 ADD supervisor/kafka.conf supervisor/zookeeper.conf /etc/supervisor/conf.d/
 #ADD supervisor/kafka.conf supervisor/zookeeper.conf supervisor/supervisor.conf /etc/supervisor/conf.d/
 
+ADD supervisor/server.properties  /opt/kafka_2.11-0.10.2.1/config/
+
+
 RUN chmod -R 777 /usr/
 RUN chmod -R 777 /var/
 RUN chmod -R 777 /bin/
